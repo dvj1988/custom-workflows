@@ -1,18 +1,16 @@
+const baseConfig = require("config/eslint/react");
+
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: ["eslint:recommended", "plugin:react/recommended", "prettier"],
-  parser: "@typescript-eslint/parser",
+  ...baseConfig,
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: "module",
+    tsconfigRootDir: __dirname,
+    project: "./tsconfig.json",
   },
-  plugins: ["react", "@typescript-eslint", "import"],
-  rules: {},
-  ignorePatterns: ["**/*.test.*"],
+  settings: {
+    "import/resolver": {
+      typescript: {
+        project: `${__dirname}/tsconfig.json`,
+      },
+    },
+  },
 };
