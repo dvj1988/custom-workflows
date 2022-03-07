@@ -14,14 +14,13 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "husky": ">=6",
-    "lint-staged": ">=10",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": "^16.0.0"
   },
   "packageManager": "yarn@1.22.17"
 }
