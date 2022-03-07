@@ -32,7 +32,13 @@ module.exports = {
     "arrow-body-style": ["error", "always"],
     "no-nested-ternary": "off",
   },
-  ignorePatterns: ["**/*.test.*", ".eslintrc.js"],
+  ignorePatterns: [
+    ".eslintrc.js",
+    "*.test.*",
+    ".turbo",
+    "build",
+    "node_modules",
+  ],
   settings: {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"],
